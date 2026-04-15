@@ -1,13 +1,16 @@
 com\cmanager\app\authentication\config\OpenApiConfig.class
 com\cmanager\app\authentication\service\UserService.class
 com\cmanager\app\core\data\ErrorResponse$ErrorResponseBuilder.class
+com\cmanager\app\integration\controller\RequestController.class
 com\cmanager\app\authentication\service\AuthenticationService.class
 com\cmanager\app\core\exception\AlreadyExistsException.class
 com\cmanager\app\authentication\data\UserUpdateRequest.class
 com\cmanager\app\application\data\ShowDTO.class
 com\cmanager\app\core\data\PageResultResponse.class
+com\cmanager\app\integration\repository\EpisodeRepository.class
 com\cmanager\app\integration\client\RequestService$1.class
 com\cmanager\app\application\data\EpisodeDTO.class
+com\cmanager\app\integration\dto\EpisodeAverageDTO.class
 com\cmanager\app\authentication\controller\UserController.class
 com\cmanager\app\authentication\domain\User.class
 com\cmanager\app\authentication\domain\Role.class
@@ -19,6 +22,7 @@ com\cmanager\app\application\domain\Show.class
 com\cmanager\app\AuthModuleApplication.class
 com\cmanager\app\application\data\ShowAverageDTO.class
 com\cmanager\app\authentication\data\UserDTO.class
+com\cmanager\app\application\domain\Episode.class
 com\cmanager\app\authentication\data\UserCreateRequest.class
 com\cmanager\app\authentication\data\LoginRequest.class
 com\cmanager\app\core\exception\GlobalExceptionHandler.class
@@ -29,7 +33,8 @@ com\cmanager\app\integration\client\RequestService.class
 com\cmanager\app\integration\dto\EpisodeRequestDTO.class
 com\cmanager\app\integration\config\RestTemplateConfiguration.class
 com\cmanager\app\integration\client\AbstractRequest.class
-com\cmanager\app\core\controller\RequestController.class
+com\cmanager\app\integration\client\ShowPersistenceService.class
+com\cmanager\app\integration\repository\ShowRepository.class
 com\cmanager\app\authentication\security\JwtConfig.class
 com\cmanager\app\integration\dto\RatingDTO.class
 com\cmanager\app\core\data\ErrorResponse.class

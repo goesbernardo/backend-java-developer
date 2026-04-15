@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cmanager.app.unit.service.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 s -- in com.cmanager.app.unit.service.UserServiceTest
