@@ -1,0 +1,2 @@
+ALTER TABLE episode
+    ADD COLUMN rating DECIMAL(5,2);

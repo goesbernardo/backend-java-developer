@@ -1,0 +1,6 @@
+C:\projetos_pessoais\backend-java-developer\src\test\java\com\cmanager\app\BaseTestApplication.java
+C:\projetos_pessoais\backend-java-developer\src\test\java\com\cmanager\app\config\AbstractPostgresContainerIT.java
+C:\projetos_pessoais\backend-java-developer\src\test\java\com\cmanager\app\controller\AuthControllerIT.java
+C:\projetos_pessoais\backend-java-developer\src\test\java\com\cmanager\app\controller\UserControllerIT.java
+C:\projetos_pessoais\backend-java-developer\src\test\java\com\cmanager\app\repository\UserRepositoryIT.java
+C:\projetos_pessoais\backend-java-developer\src\test\java\com\cmanager\app\service\UserServiceIT.java

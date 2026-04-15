@@ -1,0 +1,7 @@
+com\cmanager\app\service\UserServiceIT.class
+com\cmanager\app\controller\AuthControllerIT.class
+com\cmanager\app\config\AbstractPostgresContainerIT.class
+com\cmanager\app\controller\UserControllerIT.class
+com\cmanager\app\BaseTestApplication.class
+com\cmanager\app\controller\AuthControllerIT$TestUsersConfig.class
+com\cmanager\app\repository\UserRepositoryIT.class
