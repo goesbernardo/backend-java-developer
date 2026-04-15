@@ -1,6 +1,12 @@
 package com.cmanager.app.integration.dto;
 
-import java.math.BigDecimal;
+import io.swagger.v3.oas.annotations.media.Schema;
 
-public record EpisodeAverageDTO(Integer season, BigDecimal average) {
+@Schema(name = "EpisodeAverageDTO", description = "Média de rating por temporada")
+public record EpisodeAverageDTO(
+        @Schema(description = "Número da temporada", example = "1")
+        Integer season,
+        @Schema(description = "Média de rating da temporada", example = "8.5")
+        Double average
+) {
 }

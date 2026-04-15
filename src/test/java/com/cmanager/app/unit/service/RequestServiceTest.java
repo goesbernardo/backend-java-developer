@@ -53,27 +53,22 @@ class RequestServiceTest {
     @Test
     @DisplayName("getAverageBySeason - deve calcular média corretamente")
     void getAverageBySeason_ShouldCalculateCorrectly() {
-        Episode e1 = new Episode();
-        e1.setSeason(1);
-        e1.setRating(new BigDecimal("8.0"));
+        EpisodeAverageDTO dto = new EpisodeAverageDTO(1, 8.5);
 
-        Episode e2 = new Episode();
-        e2.setSeason(1);
-        e2.setRating(new BigDecimal("9.0"));
-
-        when(episodeRepository.findAll()).thenReturn(List.of(e1, e2));
+        when(episodeRepository.count()).thenReturn(1L);
+        when(episodeRepository.findAverageRatingBySeason()).thenReturn(List.of(dto));
 
         List<EpisodeAverageDTO> result = requestService.getAverageBySeason();
 
         assertThat(result).hasSize(1);
         assertThat(result.get(0).season()).isEqualTo(1);
-        assertThat(result.get(0).average()).isEqualByComparingTo("8.50");
+        assertThat(result.get(0).average()).isEqualTo(8.5);
     }
 
     @Test
     @DisplayName("getAverageBySeason - deve lançar exceção quando não há episódios")
     void getAverageBySeason_ShouldThrowException_WhenEmpty() {
-        when(episodeRepository.findAll()).thenReturn(Collections.emptyList());
+        when(episodeRepository.count()).thenReturn(0L);
 
         assertThatThrownBy(() -> requestService.getAverageBySeason())
                 .isInstanceOf(RuntimeException.class)

@@ -1,6 +1,7 @@
 package com.cmanager.app.integration.repository;
 
 import com.cmanager.app.application.domain.Episode;
+import com.cmanager.app.integration.dto.EpisodeAverageDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -13,10 +14,9 @@ public interface EpisodeRepository extends JpaRepository<Episode,String > {
     boolean existsByIdIntegration(Integer idIntegration);
 
     @Query("""
-    SELECT e.season, AVG(e.rating)
+    SELECT new com.cmanager.app.integration.dto.EpisodeAverageDTO(e.season, AVG(e.rating))
     FROM Episode e
-    WHERE e.rating IS NOT NULL
     GROUP BY e.season
 """)
-    List<Object[]> findAverageRatingBySeason();
+    List<EpisodeAverageDTO> findAverageRatingBySeason();
 }
